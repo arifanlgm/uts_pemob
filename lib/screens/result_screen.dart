@@ -12,7 +12,6 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Kita gunakan 'watch' untuk mendapatkan data sekali saja
     final provider = context.watch<QuizProvider>();
     final score = provider.calculateScore();
     final totalQuestions = provider.questions.length;
@@ -32,7 +31,6 @@ class ResultScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              // Menggunakan Aset Ikon
               const Icon(Icons.emoji_events, color: Colors.amber, size: 100),
               const SizedBox(height: 20),
               Text(

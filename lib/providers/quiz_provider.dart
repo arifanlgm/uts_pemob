@@ -21,12 +21,12 @@ class QuizProvider with ChangeNotifier {
   // Setters
   void setUserName(String name) {
     _userName = name;
-    notifyListeners(); // Memberi tahu UI untuk update
+    notifyListeners();
   }
 
   void selectAnswer(int questionIndex, int optionIndex) {
     _userAnswers[questionIndex] = optionIndex;
-    notifyListeners(); // [cite: 171]
+    notifyListeners();
   }
 
   void nextQuestion() {

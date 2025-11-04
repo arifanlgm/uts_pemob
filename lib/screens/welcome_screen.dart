@@ -19,39 +19,47 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   @override
   void dispose() {
-    _nameController.dispose(); // Wajib di-dispose [cite: 650]
+    _nameController.dispose(); // Wajib di-dispose (Modul 4)
     super.dispose();
   }
 
   void _startQuiz() {
     if (_nameController.text.trim().isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Nama tidak boleh kosong!')),
+        SnackBar(
+          content: Text(
+            'Nama tidak boleh kosong!',
+            style: GoogleFonts.poppins(),
+          ),
+          backgroundColor: Colors.redAccent,
+        ),
       );
       return;
     }
     // Set nama di provider dan navigasi
     context.read<QuizProvider>().setUserName(_nameController.text.trim());
-    context.go(AppRoutes.quiz); // Navigasi pakai go_router [cite: 1277]
+    context.go(AppRoutes.quiz); // Navigasi pakai go_router (Modul 3)
   }
 
   @override
   Widget build(BuildContext context) {
-    // Kriteria 6: Dynamic Sizing
-    final screenWidth = MediaQuery.of(context).size.width;
+    // Kriteria 6: Kita tidak perlu MediaQuery di sini,
+    // 'Padding' akan menangani responsivitas-nya.
 
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.1), // Kriteria 6
-          height: MediaQuery.of(context).size.height,
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset(
-                '../assets/images/logi final.png'
+                'assets/logobaru.png',
+                width: 150,
               ),
-              const SizedBox(height: 20),
+
+              const SizedBox(height: 12),
+
               Text(
                 'Selamat Datang di kuis_pemob!',
                 textAlign: TextAlign.center,
@@ -65,14 +73,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 controller: _nameController,
                 decoration: InputDecoration(
                   labelText: 'masukkan nama kamu',
+                  labelStyle: GoogleFonts.poppins(),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
                 style: GoogleFonts.poppins(),
+                onSubmitted: (_) => _startQuiz(),
               ),
               const SizedBox(height: 30),
-              // Kriteria 3: Reusable Widget
               CustomButton(
                 text: 'Mulai Kuis',
                 onPressed: _startQuiz,

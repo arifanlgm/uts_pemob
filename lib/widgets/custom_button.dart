@@ -14,11 +14,10 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Kriteria 6: Menggunakan ukuran dinamis
     double screenWidth = MediaQuery.of(context).size.width;
 
     return SizedBox(
-      width: screenWidth * 0.8, // 80% dari lebar layar
+      width: screenWidth * 0.8,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -31,7 +30,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: GoogleFonts.poppins( // Kriteria 5: Custom Font
+          style: GoogleFonts.poppins(
             fontSize: 18,
             fontWeight: FontWeight.w600,
           ),
