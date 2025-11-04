@@ -3,28 +3,28 @@ import '../models/question_model.dart';
 
 const List<Question> dummyQuestions = [
   Question(
-    text: "Apa framework yang digunakan untuk membangun aplikasi Flutter?",
-    options: ["React Native", "SwiftUI", "Flutter", "Kotlin Multiplatform"],
-    correctAnswerIndex: 2,
-  ),
-  Question(
-    text: "Manakah yang merupakan package state management di Flutter?",
-    options: ["Provider", "Redux", "Bloc", "Semua benar"],
-    correctAnswerIndex: 3,
-  ),
-  Question(
-    text: "Widget apa yang digunakan untuk navigasi deklaratif di Modul 3?",
-    options: ["Navigator.push", "go_router", "getx", "auto_route"],
+    text: "Mata kuliah apakah yang sedang kita pelajari bersama ini?",
+    options: ["Mobile Legends", "Pemrograman Mobile", "Flutter", "WhatsApp"],
     correctAnswerIndex: 1,
   ),
   Question(
-    text: "Perintah untuk menyimpan state saat aplikasi ditutup (Modul 4) adalah...",
-    options: ["setState", "ChangeNotifier", "SharedPreferences", "Provider.of"],
+    text: "Kapan jadwal Lab 5 Pemrograman Mobile dilaksanakan?",
+    options: ["Jumat 14:40", "Selasa 08:00", "Rabu 08:00", "Kamis 10:30"],
     correctAnswerIndex: 2,
+  ),
+  Question(
+    text: "Bahasa pemrograman apa yang digunakan oleh Flutter?",
+    options: ["Dart", "C++", "HTML", "Python"],
+    correctAnswerIndex: 0,
+  ),
+  Question(
+    text: "Apa saja platform yang didukung oleh framework Flutter?",
+    options: ["Android", "iOS", "Windows", "Semua benar"],
+    correctAnswerIndex: 3,
   ),
   Question(
     text: "Apakah `StatelessWidget` dapat berubah state-nya secara internal?",
     options: ["Ya", "Tidak", "Mungkin", "Hanya dengan setState"],
-    correctAnswerIndex: 1,
+    correctAnswerIndex: 0,
   ),
 ];

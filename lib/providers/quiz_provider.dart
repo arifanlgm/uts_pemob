@@ -6,7 +6,7 @@ import '../data/dummy_questions.dart';
 class QuizProvider with ChangeNotifier {
   String _userName = "";
   final List<Question> _questions = dummyQuestions;
-  final Map<int, int> _userAnswers = {}; // Menyimpan jawaban: <indexSoal, indexJawaban>
+  final Map<int, int> _userAnswers = {};
   int _currentQuestionIndex = 0;
 
   // Getters

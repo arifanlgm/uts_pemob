@@ -1,16 +1,18 @@
 # kuis_pemob
 
-A new Flutter project.
+Nama  : Arifan Lumban Gaol
+NIM   : 231401018
+Lab   : 5
 
-## Getting Started
+"IKPM: Ini Kuis Pem-mob" (Pemrograman Mobile)
+    adalah sebuah aplikasi kuis biasa yang memiliki 5 pertanyaan di dalamnya, dapat diubah sewaktu-waktu
+    aksen putih-biru-ungu
+    namanya diambil dari ketentuan proyek uts ini\
 
-This project is a starting point for a Flutter application.
+Credit
+Font   : [https://fonts.google.com/specimen/Poppins]
+Gambar : [Canva]
+Icon   : []
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Mockup/illustration
+Figma  : [https://www.figma.com/design/7POTOsY810I0FN2FCn0GMz/Untitled?node-id=0-1&t=AQlmhX1tzByjrSMe-1]

@@ -19,7 +19,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   @override
   void dispose() {
-    _nameController.dispose(); // Wajib di-dispose (Modul 4)
+    _nameController.dispose();
     super.dispose();
   }
 
@@ -36,15 +36,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       );
       return;
     }
-    // Set nama di provider dan navigasi
     context.read<QuizProvider>().setUserName(_nameController.text.trim());
-    context.go(AppRoutes.quiz); // Navigasi pakai go_router (Modul 3)
+    context.go(AppRoutes.quiz);
   }
 
   @override
   Widget build(BuildContext context) {
-    // Kriteria 6: Kita tidak perlu MediaQuery di sini,
-    // 'Padding' akan menangani responsivitas-nya.
 
     return Scaffold(
       body: Center(
